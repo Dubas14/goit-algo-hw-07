@@ -6,7 +6,7 @@ from contextlib import contextmanager
 def create_connection():
     try:
         """ create a database connection to database """
-        conn = psycopg2.connect(host="localhost", database="postgres", user="my_postgres", password="123456")
+        conn = psycopg2.connect(host="localhost", database="postgres", user="docker ps", password="123456")
         yield conn
         conn.close()
     except psycopg2.OperationalError as err:

@@ -1,5 +1,4 @@
 import logging
-
 from faker import Faker
 import random
 import psycopg2
@@ -10,6 +9,8 @@ fake = Faker('uk_UA')
 # Підключення до бази даних
 conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", password="123456")
 cur = conn.cursor()
+
+
 
 # Додавання груп
 for _ in range(3):
